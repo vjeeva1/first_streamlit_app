@@ -31,7 +31,6 @@ try:
   else:
     fruityvice_response = requests.get("https://fruityvice.com/api/fruit/"+ fruit_choice)
     #streamlit.text(fruityvice_response.json())
-    
     # normilise the json response 
     fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
     # show response
